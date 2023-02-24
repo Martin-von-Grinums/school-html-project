@@ -6,9 +6,49 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <link rel="stylesheet" href="css/mansStils.css">
+    <style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Main {background-color: red;}
+#List {background-color: green;}
+</style>
     </head>
     <body> 
-                   <a href="forma.html" target="forma.html">Formas</a>
+        <button class="tablink" onclick="openPage('List', this, 'green')">List</button>
+        <button class="tablink" onclick="openPage('Main', this, 'red')" id="defaultOpen">Main</button>
+<div id="Main" class="tabcontent">
 
         <h1>Datortīkli</h1>
         <p>Datortīkls ir datu pārraides sistēma, kas savieno dažādās vietās esošus datorus. Tīklu veido aparatūra un programmatūra, kas nodrošina tīkla aparatūras funkcionēšanu.</p>
@@ -19,16 +59,40 @@
             kurā lietotāja informāciju apdraud datorvīrusi, zagšanas mēģinājumi u. tml. </p>
         <p>Datortīklos parasti tiek izmantota klientservera arhitektūra, kas paredz datu apstrādes procesu sadalīt starp klientu un serveri. Serveris ir dators,
             kas nodrošina citiem tīkla datoriem koplietošanas pakalpojumus, piemēram, informācijas glabāšanu, printera lietošanu. Klients ir dators, kas pieprasa serverim kādu pakalpojumu,
-            piemēram, nosūta dokumentu izdrukāšanai vai nolasa informāciju no servera diska. Serveris vienlaikus var apkalpot vairākus klientus. </p>
+            piemēram, nosūta dokumentu izdrukāšanai vai nolasa informāciju no servera diska. Serveris vienlaikus var apkalpot vairākus klientus. </p>  
+        
            <a href="https://lv.wikipedia.org/wiki/Datort%C4%ABkls" target="https://lv.wikipedia.org/wiki/Datort%C4%ABkls">Papildus informācija</a>
-    <h3>Pēc tīkla topoloģijas</h3>
+      
+</div>
+ <div id="List" class="tabcontent">
+<h3>Pēc tīkla topoloģijas</h3>
     <ul><li>Point to point tīkls - Point to point topoloģija ir visvienkāršākā topoloģija, kurā piedalās tikai divas darbstacijas un tās abas ir saslēgtas tīklā</li>
     <li>Maģistrāles, jeb kopnes tīkls - visi tīkla mezgli ir pieslēgti koplietojamai sakaru videi (kopnei)</li>
     <li> Zvaigznes tipa tīkls - visi datori tiek pieslēgti centrmezglam vai tīkla komutatoram, šī veida topoloģija mūsdienās tiek izmantota visbiežāk</li>
     <li>Gredzentīkls - datori tiek pieslēgti kabelim, kas ir saslēgts gredzenā. Signāli tiek pārraidīti pa riņķi vienā virzienā un iziet cauri katram datoram. Šo topoloģiju lieto tur, kur nepieciešama īpaši laba noturība pret bojājumiem</li>
     <li>Koka topoloģijas tīkls - Koka topoloģijā ir viena saknes ierīce, kura ir savienota ar vienu no zemāka līmeņa tīklā saslēgtiem datoriem ar point-to-point topoloģiju. Katrs no tiem atkal ir savienots ar citu zemāka līmeņa saknes ierīci. Šo tīkla topoloģiju lieto lielos tīklos.</li></ul>
+<img src="images/img.jpg" width="1000" height="500" alt="words are a fun thing"/>  
+ </div>
+    <script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
 
-   <img src="images/img.jpg" width="1000" height="500" alt="words are a fun thing"/>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+   
     </body>
 </html>
     
