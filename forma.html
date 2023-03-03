@@ -11,7 +11,7 @@
         <p>Šodienas datums <input name="datums"></p>
         <p>Ja gribi uzzināt šodienas datumu, spied pogu DATUMS 
             <input onclick="datums.value=new Date();" name="poga" value="DATUMS" type="button">
-        <div>Pēc cikd ienām<input type="text" name="days" id="days"> </div>
+        <div>Pēc cik  dienām<input type="text" name="days" id="days"> </div>
         <script>
         function timel(){
         var days = Number(document.getElementById("days").value)*24*60*60*100;
@@ -19,7 +19,7 @@
         document.getElementById("day").value=new Date(datums2);
         }
         </script>
-          <input onclick="timel()" name="poga" value="butt" type="button">
+          <input onclick="timel()" name="poga" value="spied te" type="button">
           <div>Rezultāts<input name="day" id="day"> </div>
 
       

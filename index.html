@@ -43,11 +43,13 @@ body, html {
 
 #Main {background-color: red;}
 #List {background-color: green;}
+#Mervienibas {background-color: lime;}
 </style>
     </head>
     <body> 
         <button class="tablink" onclick="openPage('List', this, 'green')">List</button>
         <button class="tablink" onclick="openPage('Main', this, 'red')" id="defaultOpen">Main</button>
+        <button class="tablink" onclick="openPage('Mervienibas', this, 'lime')">Mervienibas</button>
 <div id="Main" class="tabcontent">
 
         <h1>Datortīkli</h1>
@@ -73,6 +75,9 @@ body, html {
     <li>Koka topoloģijas tīkls - Koka topoloģijā ir viena saknes ierīce, kura ir savienota ar vienu no zemāka līmeņa tīklā saslēgtiem datoriem ar point-to-point topoloģiju. Katrs no tiem atkal ir savienots ar citu zemāka līmeņa saknes ierīci. Šo tīkla topoloģiju lieto lielos tīklos.</li></ul>
 <img src="images/img.jpg" width="1000" height="500" alt="words are a fun thing"/>  
  </div>
+        <div id="Mervienibas" class="tabcontent">
+            <h1><a href="mervienibas.html" target="mervienibas.html">Te saite uz mērvienībām</ h1>
+        </div>
     <script>
 function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
