@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Informācijas daudzuma mērvienības</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/mervienibam.css">
+    </head>
+    <body>
+        <h1>Informācijas daudzuma mērvienības</h1>
+    <form>
+        <p><div><input type="text" name="greatbritain" id="greatbritain"> GB=</div></p>
+        <script>
+            function MB(){
+            var MeB = Number(document.getElementById("greatbritain").value)*1024;
+                document.getElementById("mega").value=MeB;
+    }
+                function MiB(){
+            var MibB = Number(document.getElementById("greatbritain").value)*953.674316;
+            document.getElementById("mibi").value=MibB;
+    }
+        </script>
+        <p><div><input onclick="MB()" type="button" name="mountblanc" value="Izteikt Megabaitos" id="mountblanc"><input name="mega" id="mega">MB</div></p>
+    <p><div><input onclick="MiB()" type="button" name="ministryofbeaurocracy" value="Izteikt Mibibaitos" id="ministryofbeaurocracy"><input name="mibi" id="mibi">MiB</div></p>
+    </form>
+    </body>
+</html>
