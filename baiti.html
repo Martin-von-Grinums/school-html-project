@@ -1,0 +1,32 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>   <script>
+             function KB(){
+            var KilB = Number(document.getElementById("greatbritain").value)*1024*25;
+                document.getElementById("mega").value=KilB;
+            }
+             function KiB(){
+            var KiliB = Number(document.getElementById("greatbritain").value)*976.5625*25;
+                document.getElementById("mega").value=KiliB;
+            }
+            function clearInput(){
+      var getValue= document.getElementById("mega");
+        if (getValue.value !="") {
+            getValue.value = "";}
+            var getValue2= document.getElementById("greatbritain");
+        if (getValue2.value !="") {
+            getValue2.value = "";
+        }
+ }
+            </script>
+        Aprēķināt cik daudz informācijas var lejupielādēt
+        <div><input onclick="clearInput()" type="text" name="greatbritain" id="greatbritain">sekundēs, ja inetrneta ātrums ir 25Mbps</div>
+        <p>Atbilde</p>
+     
+        <p><input name="mega" id="mega"><input onclick="KiB()" type="radio" id="kibu" name="KiB">KiB<input onclick="KB()" type="radio" id="kilo" name="KB">KB</p>
+    </body>
+</html>
